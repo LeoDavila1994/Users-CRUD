@@ -60,6 +60,11 @@ const UsersForm = ({ getUsers, userSelected, desSelect }) => {
         setPassword("");
     }
 
+    const clear = () => {
+        reset();
+        desSelect();
+    }
+
     return (
         <div className='form-container'>
             <form onSubmit={submit}>
@@ -101,14 +106,17 @@ const UsersForm = ({ getUsers, userSelected, desSelect }) => {
                     </div>
                     <div className='pass-container'>
                         <div>
-                            <input type={isVisible? "text": "password"} id='password' value={password} onChange={e => setPassword(e.target.value)} className="password-input" />
+                            <input type={isVisible ? "text" : "password"} id='password' value={password} onChange={e => setPassword(e.target.value)} className="password-input" />
                         </div>
                         <div>
                             <button type='button' className='eye-btn' onClick={() => setIsVisible(!isVisible)}><i className="fa-regular fa-eye"></i></button>
                         </div>
                     </div>
                 </div>
-                <button className='create btn'><i className="fa-regular fa-square-plus"></i> {userSelected !== null ? "Update" : "Create"}</button>
+                <div className='btns-form-cont'>
+                    <button className='create btn'><i className="fa-regular fa-square-plus"></i> {userSelected !== null ? "Update" : "Create"}</button>
+                    <button className='clear btn' type='button' onClick={clear}><i className="fa-solid fa-delete-left"></i> Clear</button>
+                </div>
             </form>
         </div>
     );

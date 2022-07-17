@@ -9,7 +9,18 @@ html {
 }
 
 body{
-    background-color: rgb(44, 94, 160);
+    background-color: rgb(37, 73, 90);;
+}
+
+.loader{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(150, 127, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
 }
 
 section{
@@ -39,7 +50,6 @@ form{
 }
 
 .card-section{
-    background-color: rgb(37, 73, 90);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -85,6 +95,7 @@ input{
     border: 0;
     color: whitesmoke;
     text-align: center;
+    cursor: pointer;
 }
 
 .btn{
@@ -101,6 +112,12 @@ input{
     text-align: end;
 }
 
+.btns-form-cont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .create{
     background-color: rgb(228, 141, 60);
 }
@@ -111,4 +128,8 @@ input{
 
 .delete{
     background-color: rgb(228, 66, 60);
+}
+
+.clear{
+    background-color: rgb(60, 228, 158)
 }
